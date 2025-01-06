@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TMcloud1/static/css/main.fc5c2c69.css",
+    "main.js": "/TMcloud1/static/js/main.f4718117.js",
+    "index.html": "/TMcloud1/index.html",
+    "main.fc5c2c69.css.map": "/TMcloud1/static/css/main.fc5c2c69.css.map",
+    "main.f4718117.js.map": "/TMcloud1/static/js/main.f4718117.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc5c2c69.css",
+    "static/js/main.f4718117.js"
+  ]
+}
