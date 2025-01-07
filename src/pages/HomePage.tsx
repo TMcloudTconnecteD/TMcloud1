@@ -7,7 +7,7 @@ import ShopCard from "../components/ShopCard/ShopCard";
 import "./HomePage.css";
 
 const categories = [
-  { id: "shopping", name: "Shopping", image: "/images/fashion0.jpg" },
+  { id: "shopping", name: "Shoppin", image: "/images/fashion0.jpg" },
   { id: "liquor", name: "Liquor", image: "/images/liquor0.jpg" },
   { id: "groceries", name: "Groceries", image: "/images/groceries.jpg" },
   { id: "transport", name: "Transport", image: "/images/rent_bike.jpg" },
