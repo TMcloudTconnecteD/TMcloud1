@@ -59,9 +59,9 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="home-page">
-      <h1>Welcome to TMcloud</h1>
+      <h1>shopLink_shopFree🦅</h1>
       <div className="category-section">
-        <h2>Categories</h2>
+        <h2>Essentials</h2>
         <div className="category-list">
           {categories.map((category) => (
             <Link

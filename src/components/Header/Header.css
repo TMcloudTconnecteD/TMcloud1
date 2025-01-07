@@ -3,15 +3,23 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #2c3e50;
+  background-color: #2c3e50; /* Dark background for the header */
   color: white;
 }
 
+/* Logo styling */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Apply color to the logo link */
+.logo a {
+  color: hsl(58, 89%, 86%); /* Light yellow color for ShopLink logo */
+  text-decoration: none; /* Remove underline from the logo link */
+}
+
+/* Navigation links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -29,6 +37,7 @@
   color: #1abc9c;
 }
 
+/* Cart icon styling */
 .cart-icon {
   font-size: 1.2rem;
   margin-left: 0.5rem;

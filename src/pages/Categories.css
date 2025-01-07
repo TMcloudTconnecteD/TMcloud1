@@ -1,54 +1,108 @@
-/* Container for category cards */
-.category-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow the cards to wrap into the next row */
-  justify-content: center; /* Center the cards horizontally */
-  gap: 20px; /* Space between cards */
+/* Ensure the entire page has some padding and the text is aligned */
+.categories {
   padding: 20px;
-  width: 100%; /* Ensure container takes full width */
-  box-sizing: border-box; /* Prevent overflow */
+  text-align: center;
 }
 
-/* Individual category card */
-.category-card {
-  width: calc(50% - 20px); /* 2 cards per row on smaller screens */
-  max-width: 300px; /* Max width of cards */
-  min-width: 200px; /* Prevent the cards from shrinking too much */
+/* Styling for the heading */
+.categories h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* The container for the category cards */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 20px; /* Space between the cards */
+  justify-items: center; /* Centers each card within its grid cell */
+  padding: 20px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* For each category card */
+.category-cards .category-card {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 100%;
+  max-width: 320px; /* Increased max-width to make the cards larger */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  text-align: center;
-  margin: 10px 0; /* Add margin to ensure cards are spaced out */
+  padding: 20px; /* Add padding inside the card */
 }
 
-.category-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+/* Hover effect for the category cards */
+.category-cards .category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Image inside category card */
+/* Styling for category images */
 .category-card img {
   width: 100%;
-  height: 200px;
+  height: 220px; /* Adjusted height for a more consistent card size */
   object-fit: cover;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #eee;
 }
 
-/* Title inside category card */
-.category-card h3 {
-  font-size: 1.2em;
-  padding: 15px;
-  margin: 0;
+/* Category card title styling */
+.category-card .category-name {
+  font-size: 1.4rem; /* Increased font size for the title */
   color: #333;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
+/* Additional card content styling (optional) */
+.category-card .category-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Responsive design for medium screens (tablets and mobile landscape) */
+@media (max-width: 768px) {
+  .category-cards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on medium screens */
+  }
+
   .category-card {
-    width: 100%; /* 1 card per row */
-    max-width: 300px; /* Keep the max width */
+    max-width: 280px; /* Adjust card size for smaller screens */
+  }
+
+  .category-card img {
+    height: 200px;
+  }
+
+  .category-name {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive design for very small screens (small mobile devices) */
+@media (max-width: 480px) {
+  .category-cards {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on very small screens */
+  }
+
+  .category-card {
+    max-width: 240px; /* Further adjustments for very small screens */
+  }
+
+  .category-card img {
+    height: 180px;
+  }
+
+  .category-name {
+    font-size: 1.2rem;
   }
 }
