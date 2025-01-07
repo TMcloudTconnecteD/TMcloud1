@@ -1,0 +1,85 @@
+/* File: src/components/CategoryCard.css */
+
+/* Container for the card */
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure vertical centering */
+  text-decoration: none;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 250px; /* Optional max width for cards */
+  margin: 10px; /* Adds spacing between cards */
+  flex: 0 1 auto; /* Allow it to shrink but not grow */
+}
+
+/* Hover effect */
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styles */
+.category-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom-in effect on hover */
+.category-card:hover .category-card-image {
+  transform: scale(1.05);
+}
+
+/* Title styles */
+.category-card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.5px; /* Adds a subtle modern touch */
+}
+
+/* Container flex styles */
+.category-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Add space between cards */
+}
+
+/* Responsive design for medium-sized screens */
+@media (max-width: 768px) {
+  .category-card {
+    max-width: 200px; /* Adjust card size for smaller screens */
+  }
+
+  .category-card-image {
+    height: 150px;
+  }
+
+  .category-card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .category-card {
+    max-width: 180px; /* Further adjustments for very small screens */
+  }
+
+  .category-card-image {
+    height: 120px;
+  }
+
+  .category-card-title {
+    font-size: 0.9rem;
+  }
+}
